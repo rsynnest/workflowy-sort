@@ -2,7 +2,7 @@
 // @name         Workflowy Sort
 // @namespace    https://workflowy.com
 // @version      0.1
-// @description  Automatically sort all open lists alphabetically when Ctrl+Shift+S is pressed (does not save, so is only useful for viewing)
+// @description  Automatically sort all open lists alphabetically when Ctrl+Shift+S is pressed
 // @author       Roland
 // @match        https://workflowy.com
 // @grant        none
@@ -25,10 +25,13 @@ function sortBullets() {
     });
 }
 
+
 function keyDownSortBullets(e) {
     if(e.keyCode === 83 && e.ctrlKey && e.shiftKey){
         sortBullets();
+        //saveAll();
     }
 }
 
+//document.addEventListener ("mousedown", sortBullets, false);
 document.addEventListener('keydown', keyDownSortBullets, false);
