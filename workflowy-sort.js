@@ -34,7 +34,6 @@ function autoSort() {
         }, 250);
     });
     $('#expandButton').click(function(event){
-        console.log($(this).attr('data-open-on-last-click'));
        // if($(this).attr('data-open-on-last-click') === "true" || typeof $(this).attr('data-open-on-last-click') === 'undefined'){
             setTimeout(function(){
                 sortBullets();
