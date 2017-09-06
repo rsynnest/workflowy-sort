@@ -11,3 +11,11 @@ By default, the script will sort all visible expanded lists in the following eve
 I have not yet figured out how to save changes for all bullets (looking into it), so all sorting is only provided in the client side view.  
 One of the quirks of this script is that the original locations are still preserved behind the scenes, so for example if you add a new bullet, it will be added below the original location of the parent bullet.  
 This isn't a huge deal since you can sort via hotkey at any time, but it is a bit jarring.
+
+
+### ToDo:
+
+  - Enable saving of sorted data
+    - Already looked into WorkFlowy's AJAX save function (push_poll), minified code difficult to decipher, might be usable but looks very difficult.
+    - Better idea! save selected list to clipboard in sorted format, allowing user to paste. This takes a couple extra clicks but allows reliable saving and undo.
+
