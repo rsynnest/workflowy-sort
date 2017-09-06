@@ -16,6 +16,7 @@ This isn't a huge deal since you can sort via hotkey at any time, but it is a bi
 ### ToDo:
 
   - Enable saving of sorted data
-    - Already looked into WorkFlowy's AJAX save function (push_poll), minified code difficult to decipher, might be usable but looks very difficult.
-    - Better idea! save selected list to clipboard in sorted format, allowing user to paste. This takes a couple extra clicks but allows reliable saving and undo.
+   - Already looked into WorkFlowy's AJAX save function (push_poll), minified code difficult to decipher, might be usable but looks very difficult.
+   - Better idea! save selected list to clipboard in sorted format, delete selected list, then paste sorted list in its place. This provides reliable saving and also allows undo.
+     - Deleting a bullet: $('#selector').getProject().deleteIt();
 
