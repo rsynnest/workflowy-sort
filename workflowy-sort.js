@@ -2,14 +2,28 @@
 // @name         Workflowy Sort
 // @namespace    https://workflowy.com
 // @version      0.1
-// @description  Automatically sort all open lists alphabetically when Ctrl+Shift+S is pressed
+// @description  Alphabetically sort open lists in workflowy
 // @author       Roland
 // @match        https://workflowy.com
 // @run-at       document-idle
 // @grant        none
 // ==/UserScript==
 
+// On page load, listen for bullets to populate, then sort them
+var bulletLoaded = setInterval(function(){
+    console.log('checking bullets');
+    if( document.getElementById('loadingScreen').style.display === 'none' ) {
+        console.log('bullets loaded!');
+        sortBullets();
+        clearInterval(bulletLoaded);
+    }
+}, 200);
 
+// sort bullets on click events (bullet expansion and clicking into a bullet)
+document.addEventListener ("mousedown", autoSort, false);
+
+// sort bullets on hotkey press (Ctrl+Shift+S)
+document.addEventListener('keydown', keyDownSortBullets, false);
 
 function autoSort() {
     $(".bullet, a.content, #expandButton").unbind();
@@ -30,10 +44,7 @@ function autoSort() {
     });
 
 }
-// sort bullets on initial page load
-setTimeout(function(){
-    sortBullets();
-}, 2000);
+
 function sortBullets() {
     jQuery.fn.sortDomElements = (function() {
         return function(comparator) {
@@ -52,23 +63,9 @@ function sortBullets() {
     return true;
 }
 
-
 function keyDownSortBullets(e) {
     if(e.keyCode === 83 && e.ctrlKey && e.shiftKey){
         sortBullets();
         //saveAll();
     }
 }
-
-document.addEventListener ("mousedown", autoSort, false);
-document.addEventListener('keydown', keyDownSortBullets, false);
-
-// On page load, listen for bullets to populate, then sort them
-var bulletLoaded = setInterval(function(){
-    console.log('checking bullets');
-    if( document.getElementById('loadingScreen').style.display === 'none' ) {
-        console.log('bullets loaded!');
-        sortBullets();
-        clearInterval(bulletLoaded);
-    }
-}, 200);
