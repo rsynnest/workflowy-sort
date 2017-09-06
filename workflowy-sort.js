@@ -7,11 +7,24 @@
 // @match        https://workflowy.com
 // ==/UserScript==
 
+
+
 function autoSort() {
-    $('.name ').click(function(event){
+    $(".bullet, a.content, #expandButton").unbind();
+    $('.bullet, a.content').click(function(event){
         setTimeout(function(){
             sortBullets();
-        }, 250);
+            console.log('bullet sort');
+        }, 200);
+    });
+    $('#expandButton').click(function(event){
+        console.log($(this).attr('data-open-on-last-click'));
+        if($(this).attr('data-open-on-last-click') === "true" || typeof $(this).attr('data-open-on-last-click') === 'undefined'){
+            setTimeout(function(){
+                sortBullets();
+                console.log('expand sort');
+            }, 50);
+        }
     });
 }
 
@@ -43,8 +56,3 @@ function keyDownSortBullets(e) {
 
 document.addEventListener ("mousedown", autoSort, false);
 document.addEventListener('keydown', keyDownSortBullets, false);
-
-
-//(function() {
-//    'use strict';
-//})();
