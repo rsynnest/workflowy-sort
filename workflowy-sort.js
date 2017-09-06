@@ -5,8 +5,15 @@
 // @description  Automatically sort all open lists alphabetically when Ctrl+Shift+S is pressed
 // @author       Roland
 // @match        https://workflowy.com
-// @grant        none
 // ==/UserScript==
+
+function autoSort() {
+    $('.name ').click(function(event){
+        setTimeout(function(){
+            sortBullets();
+        }, 250);
+    });
+}
 
 function sortBullets() {
     jQuery.fn.sortDomElements = (function() {
@@ -23,6 +30,7 @@ function sortBullets() {
         if (akey < bkey) return -1;
         if (akey > bkey) return 1;
     });
+    return true;
 }
 
 
@@ -33,5 +41,10 @@ function keyDownSortBullets(e) {
     }
 }
 
-//document.addEventListener ("mousedown", sortBullets, false);
+document.addEventListener ("mousedown", autoSort, false);
 document.addEventListener('keydown', keyDownSortBullets, false);
+
+
+//(function() {
+//    'use strict';
+//})();
