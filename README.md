@@ -1,6 +1,6 @@
 # workflowy-sort
 This is an experimental userscript for sorting workflowy lists via TamperMonkey.  
-By default, the script will sort all visible expanded lists in the following events:
+By default, the script will sort all visible expanded lists on the following events, creating the illusion that everything is always sorted:
   - on page load
   - whenever a bullet is clicked
   - whenever a bullet is expanded
