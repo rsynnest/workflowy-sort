@@ -15,7 +15,7 @@ The original locations are still preserved behind the scenes. The only noticeabl
 ### ToDo:
 
   - Enable saving of sorted data, which should elimnate bullet location quirk
-   - Already looked into WorkFlowy's AJAX save function (push_poll), minified code difficult to decipher, might be usable but looks very difficult.
-   - Better idea! save selected list to clipboard in sorted format, delete selected list, then paste sorted list in its place. This provides reliable saving and also allows undo.
-     - Deleting a bullet: $('#selector').getProject().deleteIt();
+    - Already looked into WorkFlowy's AJAX save function (push_poll), minified code difficult to decipher, might be usable but looks very difficult.
+    - Better idea! save selected list to clipboard in sorted format, delete selected list, then paste sorted list in its place. This provides reliable saving and also allows undo.
+      - Deleting a bullet: $('#selector').getProject().deleteIt();
 
