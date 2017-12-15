@@ -3,7 +3,7 @@
 // @namespace    https://workflowy.com
 // @version      0.1
 // @description  Alphabetically sort open lists in workflowy
-// @author       Roland Synnestvedt
+// @author       Roland
 // @match        https://workflowy.com
 // @run-at       document-idle
 // @grant        none
@@ -20,10 +20,10 @@ var bulletLoaded = setInterval(function(){
 }, 200);
 
 // sort bullets on click events (bullet expansion and clicking into a bullet)
-document.addEventListener ("mousedown", autoSort, false);
+document.addEventListener ("mousedown", autoSort);
 
-// sort bullets on hotkey press (Ctrl+Shift+S)
-document.addEventListener('keydown', keyDownSortBullets, false);
+// sort bullets on hotkey press (Ctrl+Shift+Space by default)
+document.addEventListener('keydown', keyDownSortBullets);
 
 function autoSort() {
     $(".bullet, a.content, #expandButton").unbind();
@@ -63,8 +63,11 @@ function sortBullets() {
 }
 
 function keyDownSortBullets(e) {
-    if(e.keyCode === 83 && e.ctrlKey && e.shiftKey){
+    if(e.ctrlKey && e.shiftKey && e.keyCode === 32){
+        e.preventDefault();
+        console.log('sorting...');
         sortBullets();
+        return false;
         //saveAll();
     }
 }
