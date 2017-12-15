@@ -3,7 +3,7 @@
 // @namespace    https://workflowy.com
 // @version      0.1
 // @description  Alphabetically sort open lists in workflowy
-// @author       Roland
+// @author       Roland Synnestvedt
 // @match        https://workflowy.com
 // @run-at       document-idle
 // @grant        none
