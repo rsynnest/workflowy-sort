@@ -1,6 +1,6 @@
 # workflowy-sort
 
-This is a small userscript for sorting Workflowy bullets via the [TamperMonkey Extension](https://tampermonkey.net/). From the user's perspective, all bullets appear to be always sorted alphabetically everywhere.
+This is a small userscript for sorting Workflowy bullets via the [TamperMonkey Extension](https://tampermonkey.net/). From the user's perspective, all bullets appear to be always sorted alphabetically + numerically everywhere.
 
 ### Usage
 
