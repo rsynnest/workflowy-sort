@@ -6,7 +6,7 @@ This is achieved by sorting on the following events:
   - whenever a bullet is clicked into
   - whenever a bullet is expanded
   - if one of the hierarchy nav links at the top is clicked 
-  - on hotkey press (default hotkey is Ctrl+Shift+S)
+  - on hotkey press (default hotkey is Ctrl+Shift+Space)
 
 I have not yet figured out how to save sorting to the backend (looking into it), so for now all sorting is only happening on the client side.  
 This means that the original ordering is preserved on the backend, so if you disable the script the order goes back to the way it was.
