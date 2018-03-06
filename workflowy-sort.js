@@ -7,7 +7,6 @@
 // @match        https://workflowy.com
 // @run-at       document-idle
 // @grant        none
-// ==/UserScript==
 
 // On page load, listen for bullets to populate, then sort them
 var bulletLoaded = setInterval(function(){
