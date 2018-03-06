@@ -22,7 +22,7 @@ var bulletLoaded = setInterval(function(){
 // sort bullets on click events (bullet expansion and clicking into a bullet)
 document.addEventListener ("mousedown", autoSort);
 
-// sort bullets on hotkey press (Ctrl+Shift+Space by default)
+// sort bullets on hotkey press (Ctrl+Shift+S by default)
 document.addEventListener('keydown', keyDownSortBullets);
 
 function autoSort() {
@@ -63,7 +63,7 @@ function sortBullets() {
 }
 
 function keyDownSortBullets(e) {
-    if(e.ctrlKey && e.shiftKey && e.keyCode === 32){
+    if(e.ctrlKey && e.shiftKey && e.keyCode === 83){
         e.preventDefault();
         console.log('sorting...');
         sortBullets();
