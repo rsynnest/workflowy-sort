@@ -26,7 +26,7 @@ One quirk is that if you are in a sorted list, and you add a new bullet (e.g. by
 
 ### ToDo:
 
-  - Enable saving of sorted data, which should eliminate bullet creation bug
+  - Enable saving of sorted data, which should eliminate bullet creation quirk
     - Looked into WorkFlowy's AJAX save function + endpoint (push_poll), the minified code is difficult to decipher and seems to use a randomly generated key for each save (CSRF token?). I don't know the logic behind this key or if I can even mimic it via custom script.
     - Better idea:
      - save all visible bullets to the clipboard in sorted format
