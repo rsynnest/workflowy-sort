@@ -7,7 +7,7 @@
 // @match        https://workflowy.com
 // @run-at       document-idle
 // @grant        none
-// ==UserScript==
+// ==/UserScript==
 
 (function() {
     'use strict';
