@@ -11,7 +11,7 @@
 
 (function() {
     'use strict';
-    
+
     // On page load, listen for bullets to populate, then sort them
     var bulletLoaded = setInterval(function(){
         console.log('checking bullets');
@@ -44,7 +44,12 @@
                 }, 50);
            // }
         });
-
+        $('#searchCancel').click(function(event){
+            setTimeout(function(){
+                sortBullets();
+                console.log('searchCancel sort');
+            }, 50);
+        });
     }
 
     function sortBullets() {
@@ -68,10 +73,18 @@
     function keyDownSortBullets(e) {
         if(e.ctrlKey && e.shiftKey && e.keyCode === 83){
             e.preventDefault();
-            console.log('sorting...');
-            sortBullets();
+            setTimeout(function(){
+                console.log('sorting...');
+                sortBullets();
+            }, 25);
             return false;
             //saveAll();
+        }
+        if(e.keyCode === 27){
+            setTimeout(function(){
+                    sortBullets();
+                    console.log('sorting');
+            }, 25);
         }
     }
 })();
