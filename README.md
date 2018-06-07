@@ -1,3 +1,5 @@
+This tool is deprecated in favor of rawbytz's fantastic sortWF bookmarklet: https://rawbytz.wordpress.com/
+
 # workflowy-sort
 
 This is a small userscript for sorting Workflowy bullets via TamperMonkey.
