@@ -10,7 +10,7 @@ Manual custom ordering of bullets cannot be used when this script is enabled, be
 ### Installation
 
 Like any other Tampermonkey Script, you will first need to install the [TamperMonkey Extension](https://tampermonkey.net/).
-Then you can either copy the `workflowy-sort.js` script from this repository, or simply install it from [GreasyFork](https://greasyfork.org/en/scripts/39239-workflowy-sort).
+Then you can either copy the `workflowy-sort.js` script from this repository, or install it from [GreasyFork](https://greasyfork.org/en/scripts/39239-workflowy-sort).
 
 ### Usage
 
