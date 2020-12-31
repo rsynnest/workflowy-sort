@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         Workflowy Sort
-// @namespace    rsynnest.com
+// @namespace    http://rsynnest.com
 // @version      0.1
 // @description  Alphabetically sort open lists in workflowy
 // @author       Roland
