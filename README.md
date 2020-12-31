@@ -4,7 +4,7 @@ This tool is deprecated in favor of rawbytz's fantastic sortWF bookmarklet: http
 
 This is a small userscript for sorting Workflowy bullets via TamperMonkey.
 From the user's perspective, all bullets appear in alphabetical + numerical order in all places.
-Manual ordering of bullets cannot be combined with this script, because the script will reorder things back to alphabetized/numeric order.
+Manual custom ordering of bullets cannot be used when this script is enabled, because the script will always reorder bullets back to alphabetized/numeric order.
 
 
 ### Installation
