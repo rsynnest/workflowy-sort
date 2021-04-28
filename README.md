@@ -1,4 +1,4 @@
-This tool is deprecated in favor of rawbytz's fantastic sortWF bookmarklet: https://rawbytz.wordpress.com/2018/06/07/sorting-bullets-in-workflowy-easy-as-1-2-3/
+This tool is deprecated in favor of rawbytz's sortWF bookmarklet: https://rawbytz.wordpress.com/2018/06/07/sorting-bullets-in-workflowy-easy-as-1-2-3/
 
 # workflowy-sort
 
